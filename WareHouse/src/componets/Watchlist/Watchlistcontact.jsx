@@ -1,3 +1,4 @@
+// watchlistcontext.jsx
 import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
@@ -5,9 +6,8 @@ import { toast } from 'react-toastify';
 export const WishlistContext = createContext();
 
 export const WishlistProvider = ({ children }) => {
-    const [wishlistItems, setWishlistItems] = useState([]); // ✅ Empty array default
-
-  const token = localStorage.getItem('token'); // JWT Token
+  const [wishlistItems, setWishlistItems] = useState([]);
+  const token = localStorage.getItem('token');
 
   const fetchWishlist = async () => {
     try {
@@ -38,11 +38,20 @@ export const WishlistProvider = ({ children }) => {
       await axios.delete(`https://furniture-store-backend-29c0.onrender.com/wislist/wishlist/${productId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
-      fetchWishlist();    
-        toast.success("this items removed  succefuly")
-
+      fetchWishlist();
+      toast.success("Item removed from wishlist");
     } catch (error) {
       console.error('Failed to remove from wishlist', error);
+    }
+  };
+
+  const toggleWishlist = async (productId) => {
+    const alreadyInWishlist = wishlistItems.some(item => item._id === productId);
+    if (alreadyInWishlist) {
+      await removeFromWishlist(productId);
+    } else {
+      await addToWishlist(productId);
+      toast.success("Item added to wishlist");
     }
   };
 
@@ -51,7 +60,7 @@ export const WishlistProvider = ({ children }) => {
   }, [token]);
 
   return (
-    <WishlistContext.Provider value={{ wishlistItems, addToWishlist, removeFromWishlist }}>
+    <WishlistContext.Provider value={{ wishlistItems, addToWishlist, removeFromWishlist, toggleWishlist }}>
       {children}
     </WishlistContext.Provider>
   );
