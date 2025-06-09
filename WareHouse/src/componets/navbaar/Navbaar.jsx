@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { CgProfile } from 'react-icons/cg';
 import { FiHeart } from 'react-icons/fi';
 import { jwtDecode } from 'jwt-decode';
-import SearchBar from '../serchbaar/serchbaar';
+import SearchBar from '../serchbaar/Serchbaar';
 import { CartContext } from '../Cart/Cartcontext';
 import { WishlistContext } from '../Watchlist/Watchlistcontact';
 import { ShoppingCart } from 'lucide-react';

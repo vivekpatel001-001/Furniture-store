@@ -8,6 +8,7 @@ import {
   deleteProduct,
   getProductsByCategory,
   totalproduct,
+  
 } from '../Controller/ProductController.js';
 
 const router = express.Router();
@@ -19,4 +20,5 @@ router.put('/update/:id',updateProduct);
 router.delete('/:id', deleteProduct);
 router.get('/category/:category', getProductsByCategory);
 router.get('/totalproduct',totalproduct);
+
 export default router;

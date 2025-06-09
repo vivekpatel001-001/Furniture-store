@@ -36,7 +36,9 @@ app.use('/razorpay', Razorpayrouter) // payment gateway
 app.use('/order', orderRouter)
 app.use('/serch',SerchRouter)
 // app.use('/mailer',MailerRoutes)
-
+app.get('/', (req, res) => {
+  res.send('Backend is working!');
+});
 app.listen(4000, () => {
-  console.log("server is running on port 4000");
+  console.log("https://furniture-store-backend-29c0.onrender.com");
 })

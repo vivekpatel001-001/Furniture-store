@@ -61,7 +61,7 @@ const CheckoutForm = ({ user = {} }) => {
 
     try {
       const { data: orderData } = await axios.post(
-        'http://localhost:4000/razorpay/create-order',
+        'https://furniture-store-backend-29c0.onrender.com/razorpay/create-order',
         {
           cart,
           shippingAddress: formData,
@@ -83,7 +83,7 @@ const CheckoutForm = ({ user = {} }) => {
         handler: async function (response) {
           try {
             const verifyRes = await axios.post(
-              'http://localhost:4000/razorpay/verify-payment',
+              'https://furniture-store-backend-29c0.onrender.com/razorpay/verify-payment',
               {
                 razorpay_payment_id: response.razorpay_payment_id,
                 razorpay_order_id: response.razorpay_order_id,

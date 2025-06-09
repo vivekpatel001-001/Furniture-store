@@ -13,7 +13,7 @@ const AllProducts = () => {
 
   // Fetch all products
   const fetchProducts = () => {
-    fetch("http://localhost:4000/product/get")
+    fetch("https://furniture-store-backend-29c0.onrender.com/product/get")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   };
@@ -41,7 +41,7 @@ const AllProducts = () => {
 
   // Submit updated product
   const handleUpdateSubmit = () => {
-    fetch(`http://localhost:4000/product/update/${editingProduct}`, {
+    fetch(`https://furniture-store-backend-29c0.onrender.com/product/update/${editingProduct}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

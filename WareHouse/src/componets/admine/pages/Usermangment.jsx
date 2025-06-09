@@ -7,7 +7,7 @@ const UserList = () => {
   // ✅ Fetch all users
   const fetchUsers = async () => {
     try {
-      const res = await axios.get('http://localhost:4000/user/getalluser', {
+      const res = await axios.get('https://furniture-store-backend-29c0.onrender.com/user/getalluser', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -22,7 +22,7 @@ const UserList = () => {
   const handleRoleChange = async (id, newRole) => {
     try {
       await axios.put(
-        `http://localhost:4000/user/role/${id}`,
+        `https://furniture-store-backend-29c0.onrender.com/user/role/${id}`,
         { role: newRole },
         {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
@@ -37,8 +37,8 @@ const UserList = () => {
   // ✅ Toggle block/unblock
   const toggleBlockUser = async (id, isBlocked) => {
     const url = isBlocked
-      ? `http://localhost:4000/user/unblock/${id}`
-      : `http://localhost:4000/user/block/${id}`;
+      ? `https://furniture-store-backend-29c0.onrender.com/user/unblock/${id}`
+      : `https://furniture-store-backend-29c0.onrender.com/user/block/${id}`;
 
     try {
       await axios.put(url, {}, {
@@ -54,7 +54,7 @@ const UserList = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this user?")) {
       try {
-        await axios.delete(`http://localhost:4000/user/delete/${id}`, {
+        await axios.delete(`https://furniture-store-backend-29c0.onrender.com/user/delete/${id}`, {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         fetchUsers();

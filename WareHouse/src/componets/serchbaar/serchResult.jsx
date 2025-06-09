@@ -13,7 +13,7 @@ const SearchResultsPage = () => {
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        const { data } = await axios.get('http://localhost:4000/serch/search', {
+        const { data } = await axios.get('https://furniture-store-backend-29c0.onrender.com/serch/search', {
           params: { q: searchQuery }
         });
         setProducts(data.data || []);

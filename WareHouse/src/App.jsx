@@ -39,6 +39,9 @@ import Checkout from './componets/payment/Cheakout';
 import Userorder from './componets/order/Userorder';
 //  pop up
 import DiscountPopup from './componets/Popup/Popup'; // Importing popup
+// serch 
+import SearchResults from './componets/serchbaar/serchResult';
+
 
 function App() {
   const [showPopup, setShowPopup] = useState(false);
@@ -99,6 +102,8 @@ function App() {
 
                 <Route path="/check-out" element={<Checkout />} />
                 <Route path='/userorder' element={<Userorder />} />
+                <Route path="/search" element={<SearchResults />} />
+
 
               </Route>
 

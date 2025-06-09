@@ -11,7 +11,7 @@ const UserOrder = () => {
       setLoading(true);
       const token = localStorage.getItem("token");
 
-      const res = await axios.get("http://localhost:4000/order/getorder", {
+      const res = await axios.get("https://furniture-store-backend-29c0.onrender.com/order/getorder", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

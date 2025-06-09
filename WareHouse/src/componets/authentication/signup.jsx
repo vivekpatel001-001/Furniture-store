@@ -35,7 +35,7 @@ const SignupForm = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:4000/api/register', {
+      const response = await axios.post('https://furniture-store-backend-29c0.onrender.com/api/register', {
         name,
         email,
         phone,

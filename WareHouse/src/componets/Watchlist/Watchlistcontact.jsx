@@ -11,7 +11,7 @@ export const WishlistProvider = ({ children }) => {
 
   const fetchWishlist = async () => {
     try {
-      const res = await axios.get('http://localhost:4000/wislist/wishlist', {
+      const res = await axios.get('https://furniture-store-backend-29c0.onrender.com/wislist/wishlist', {
         headers: { Authorization: `Bearer ${token}` },
       });
       setWishlistItems(res.data.wishlist || []);
@@ -23,7 +23,7 @@ export const WishlistProvider = ({ children }) => {
   const addToWishlist = async (productId) => {
     try {
       await axios.post(
-        'http://localhost:4000/wislist/wishlist',
+        'https://furniture-store-backend-29c0.onrender.com/wislist/wishlist',
         { productId },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -35,7 +35,7 @@ export const WishlistProvider = ({ children }) => {
 
   const removeFromWishlist = async (productId) => {
     try {
-      await axios.delete(`http://localhost:4000/wislist/wishlist/${productId}`, {
+      await axios.delete(`https://furniture-store-backend-29c0.onrender.com/wislist/wishlist/${productId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchWishlist();    

@@ -132,3 +132,4 @@ export const  totalproduct = async ( req , res) =>{
     res.status(500).json({ message: 'Error fetching total product count', error: error.message });
   }
 }
+// serch 

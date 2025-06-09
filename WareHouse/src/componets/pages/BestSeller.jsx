@@ -18,7 +18,7 @@ function BestSeller() {
     const fetchCategoryProducts = async () => {
       try {
         // First get all unique categories
-        const categoriesResponse = await axios.get('http://localhost:4000/product/get');
+        const categoriesResponse = await axios.get('https://furniture-store-backend-29c0.onrender.com/product/get');
         const allProducts = categoriesResponse.data;
         
         // Get unique categories
@@ -27,7 +27,7 @@ function BestSeller() {
         // Fetch one product from each category
         const categoryProducts = await Promise.all(
           uniqueCategories.map(async category => {
-            const response = await axios.get(`http://localhost:4000/product/category/${category}`);
+            const response = await axios.get(`https://furniture-store-backend-29c0.onrender.com/product/category/${category}`);
             return response.data[0]; // Get first product from each category
           })
         );

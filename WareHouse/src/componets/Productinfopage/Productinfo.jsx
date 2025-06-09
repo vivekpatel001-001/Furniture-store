@@ -18,11 +18,11 @@ const ProductInfo = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const res = await fetch(`http://localhost:4000/product/${id}`);
+        const res = await fetch(`https://furniture-store-backend-29c0.onrender.com/product/${id}`);
         const data = await res.json();
         setProduct(data);
 
-        const categoryRes = await fetch(`http://localhost:4000/product/category/${data.category}`);
+        const categoryRes = await fetch(`https://furniture-store-backend-29c0.onrender.com/product/category/${data.category}`);
         const categoryData = await categoryRes.json();
 
         const filtered = categoryData.filter(p => p._id !== data._id);

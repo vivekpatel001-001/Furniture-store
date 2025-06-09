@@ -17,7 +17,7 @@ export default function CategoryProducts() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get("http://localhost:4000/products/getData");
+        const res = await axios.get("https://furniture-store-backend-29c0.onrender.com/products/getData");
         setProducts(res.data);
       } catch (err) {
         setError("Failed to load products. Please try again later.");

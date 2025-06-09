@@ -49,7 +49,7 @@ const AddProduct = () => {
         return;
       }
       const { data } = await axios.post(
-        "http://localhost:4000/product/add",
+        "https://furniture-store-backend-29c0.onrender.com/product/add",
         {
           title: formData.title,
           description: formData.description,

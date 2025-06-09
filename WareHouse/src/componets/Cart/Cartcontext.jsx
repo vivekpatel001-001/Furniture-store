@@ -12,7 +12,7 @@ export const CartProvider = ({ children }) => {
     if (!token) return;
 
     try {
-      const res = await fetch("http://localhost:4000/cart/user", {
+      const res = await fetch("https://furniture-store-backend-29c0.onrender.com/cart/user", {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
@@ -35,7 +35,7 @@ export const CartProvider = ({ children }) => {
     }
 
     try {
-      const res = await fetch("http://localhost:4000/cart/add", {
+      const res = await fetch("https://furniture-store-backend-29c0.onrender.com/cart/add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -64,7 +64,7 @@ export const CartProvider = ({ children }) => {
     const token = localStorage.getItem("token");
 
     try {
-      await fetch("http://localhost:4000/cart/remove", {
+      await fetch("https://furniture-store-backend-29c0.onrender.com/cart/remove", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -83,7 +83,7 @@ export const CartProvider = ({ children }) => {
     const token = localStorage.getItem("token");
 
     try {
-      await fetch("http://localhost:4000/cart/update", {
+      await fetch("https://furniture-store-backend-29c0.onrender.com/cart/update", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

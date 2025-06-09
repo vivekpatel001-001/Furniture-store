@@ -16,7 +16,7 @@ const ProductListing = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get(`http://localhost:4000/category/${category}`);
+        const res = await axios.get(`https://furniture-store-backend-29c0.onrender.com/category/${category}`);
         setProducts(res.data);
       } catch (err) {
         console.error('Error fetching products:', err);

@@ -23,13 +23,13 @@ const Trading = () => {
   useEffect(() => {
     const fetchCategoryProducts = async () => {
       try {
-        const allProductsResponse = await axios.get('http://localhost:4000/product/get');
+        const allProductsResponse = await axios.get('https://furniture-store-backend-29c0.onrender.com/product/get');
         const allProducts = allProductsResponse.data;
 
         const uniqueCategories = [...new Set(allProducts.map(product => product.category))];
 
         const categoryProductsPromises = uniqueCategories.map(async category => {
-          const response = await axios.get(`http://localhost:4000/product/category/${category}`);
+          const response = await axios.get(`https://furniture-store-backend-29c0.onrender.com/product/category/${category}`);
           return response.data.slice(0, 2);
         });
 

@@ -30,7 +30,7 @@ const AdminOrders = () => {
         ...(filters.paymentStatus && { paymentStatus: filters.paymentStatus })
       }).toString();
 
-      const res = await axios.get(`http://localhost:4000/order/orders?${query}`, {
+      const res = await axios.get(`https://furniture-store-backend-29c0.onrender.com/order/orders?${query}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -65,7 +65,7 @@ const AdminOrders = () => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.patch(
-        `http://localhost:4000/order/orders/${orderId}/status`,
+        `https://furniture-store-backend-29c0.onrender.com/order/orders/${orderId}/status`,
         { status: newStatus },
         {
           headers: {

@@ -1,18 +1,24 @@
-import Product from "../Model/ProductModel.js";
+import ProductModel from '../Model/ProductModel.js';
 
 export const searchProducts = async (req, res) => {
   try {
-    const keyword = req.query.q;
+    const { q } = req.query;
+    
+    const results = await ProductModel.find({
+      $or: [
+        { title: { $regex: q, $options: 'i' } },
+        { description: { $regex: q, $options: 'i' } }
+      ]
+    }).limit(50); // Limit results
 
-    const query = keyword
-      ? {
-          title: { $regex: keyword, $options: "i" } // case-insensitive match in title
-        }
-      : {};
-
-    const products = await Product.find(query);
-    res.status(200).json(products);
+    res.json({
+      success: true,
+      data: results
+    });
   } catch (error) {
-    res.status(500).json({ message: "Something went wrong", error });
+    res.status(500).json({
+      success: false,
+      message: 'Search failed'
+    });
   }
 };

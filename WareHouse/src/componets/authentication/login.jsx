@@ -12,7 +12,7 @@ const LoginPage = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:4000/api/login', {
+      const response = await axios.post('https://furniture-store-backend-29c0.onrender.com/api/login', {
         email: email.toLowerCase().trim(), // Normalize email input
         password: password.trim(), // Trim whitespace
       });
