@@ -17,7 +17,10 @@ dotenv.config();
 const app = express();
 app.use(cors());
 app.use(cors({
-  origin: "http://localhost:5173",
+   origin: [
+    "http://localhost:5173",
+    "https://furniture-store-rho-blond.vercel.app/"
+  ],
   credentials: true,
   methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
