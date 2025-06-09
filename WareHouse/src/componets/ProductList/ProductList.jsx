@@ -34,7 +34,7 @@ export default function CategoryProducts() {
     const fetchWishlist = async () => {
       if (token) {
         try {
-          const res = await axios.get("http://localhost:4000/wislist/", {
+          const res = await axios.get("https://furniture-store-backend-29c0.onrender.com/wislist/", {
             headers: { Authorization: `Bearer ${token}` },
           });
           // Store wishlist product IDs for quick lookup
@@ -57,7 +57,7 @@ export default function CategoryProducts() {
   const handleAddToCart = async (product) => {
     if (token) {
       try {
-        const response = await fetch("http://localhost:4000/cart/add", {
+        const response = await fetch("https://furniture-store-backend-29c0.onrender.com/cart/add", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -93,7 +93,7 @@ export default function CategoryProducts() {
       try {
         if (wishlist.includes(product._id)) {
           // Remove from wishlist
-          await axios.delete(`http://localhost:4000/wislist/remove/${product._id}`, {
+          await axios.delete(`https://furniture-store-backend-29c0.onrender.com/wislist/remove/${product._id}`, {
             headers: { Authorization: `Bearer ${token}` },
           });
           setWishlist((prev) => prev.filter((id) => id !== product._id));
@@ -101,7 +101,7 @@ export default function CategoryProducts() {
         } else {
           // Add to wishlist
           await axios.post(
-            "http://localhost:4000/wislist/add",
+            "https://furniture-store-backend-29c0.onrender.com/wislist/add",
             { productId: product._id },
             { headers: { Authorization: `Bearer ${token}` } }
           );

@@ -16,7 +16,9 @@ const ProductListing = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/categories`);
+        const res = await axios.get(`https://furniture-store-backend-29c0.onrender.com/category/${category}`
+          
+        );
         setProducts(res.data);
       } catch (err) {
         console.error('Error fetching products:', err);
@@ -78,35 +80,35 @@ const ProductListing = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {products.map((product) => (
-              <Link to={`/product/${product._id}`} key={product._id}>
-                <div className="bg-white rounded-lg shadow-md overflow-hidden group relative">
-                  <div className="relative">
-                    <img
-                      src={product.imageUrl}
-                      alt={product.title}
-                      className="w-full h-64 object-cover"
-                    />
-                    <button
-                      className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-amber-500 text-white px-4 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        handleAdd(product);
-                      }}
-                    >
-                      Add to Cart
-                    </button>
-                  </div>
-                  <div className="p-4">
-                    <h2 className="text-lg font-semibold text-gray-800">{product.title}</h2>
-                    <p className="text-sm text-gray-600 line-clamp-1">{product.description}</p>
-                    <div className="mt-2">
-                      <span className="text-amber-500 font-bold">₹{product.price}</span>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            ))}
+          {products.map((product) => (
+  <Link to={`/product/${product._id}`} key={product._id}>
+    <div className="bg-white rounded-lg shadow-md overflow-hidden group relative">
+      <div className="relative">
+        <img
+          src={product.imageUrl}
+          alt={product.title}
+          className="w-full h-64 object-cover"
+        />
+        <button
+          className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-amber-500 text-white px-4 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          onClick={(e) => {
+            e.preventDefault();
+            handleAdd(product);
+          }}
+        >
+          Add to Cart
+        </button>
+      </div>
+      <div className="p-4">
+        <h2 className="text-lg font-semibold text-gray-800">{product.title}</h2>
+        <p className="text-sm text-gray-600 line-clamp-1">{product.description}</p>
+        <div className="mt-2">
+          <span className="text-amber-500 font-bold">₹{product.price}</span>
+        </div>
+      </div>
+    </div>
+  </Link>
+))}
           </div>
         </div>
       </div>
