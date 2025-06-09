@@ -34,16 +34,12 @@ app.use('/cart', CartRoutes)
 app.use('/wislist', WislistRoute)
 app.use('/razorpay', Razorpayrouter) // payment gateway
 app.use('/order', orderRouter)
-app.use('/serch',SerchRouter)
+app.use('/search',SerchRouter)
 // app.use('/mailer',MailerRoutes)
 app.get('/', (req, res) => {
   res.send('Backend is working!');
 });
 app.listen(4000, () => {
-<<<<<<< HEAD
   console.log("https://furniture-store-backend-29c0.onrender.com");
 })
-=======
-  console.log("server is running on port 4000");
-})
->>>>>>> 168b701e92e0d1a3982625867bec5e2b2a490747
+ 
