@@ -5,7 +5,7 @@ import AuthRoutes from "./Routes/AuthRoutes.js"
 import adminRoutes from "./Routes/admineRoutes.js";
 import ProductsRoutes from "./Routes/ProductsRoutes.js";
 import UserRoutes from "./Routes/UserMangmentRoutes.js";
-import CatgoeryRoutes from "./Routes/CatgoeyRoutes.js"
+import CatgoeryRoutes from "./Routes/CategoeyRoutes.js"
 import CartRoutes from "./Routes/CartRoutes.js"
 import Razorpayrouter from "./Routes/razorpayRoutes.js";
 import orderRouter from "./Routes/orderRoutes.js";
