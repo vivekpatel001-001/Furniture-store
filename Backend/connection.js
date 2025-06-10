@@ -1,5 +1,23 @@
+// connection.js
 import mongoose from "mongoose";
+import dotenv from "dotenv";
 
-const URL = "mongodb+srv://warehouse:wareHouse123@cluster0.cxce2t4.mongodb.net/Funiture-Store?retryWrites=true&w=majority&appName=Cluster0";
-mongoose.set("strictQuery",false);
-export default mongoose.connect(URL)
+dotenv.config();
+
+const connectDB = async () => {
+  try {
+    mongoose.set("strictQuery", false);
+
+    const conn = await mongoose.connect(process.env.MONGO_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+
+    console.log(` MongoDB connected: ${conn.connection.host}`);
+  } catch (error) {
+    console.error(`MongoDB connection error: ${error.message}`);
+    process.exit(1); // Force exit if connection fails
+  }
+};
+
+export default connectDB;

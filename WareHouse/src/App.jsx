@@ -1,5 +1,5 @@
 import React ,{useEffect,useState} from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {  Routes, Route } from 'react-router-dom';
 import Layout from './componets/Layout/layout';
 import Home from './componets/home/Home';
 import SignupForm from './componets/authentication/signup';
@@ -62,7 +62,6 @@ function App() {
     <>
       <CartProvider>
         <WishlistProvider>
-          <BrowserRouter>
             <ToastContainer position="top-right" autoClose={2000} />
                       {showPopup && <DiscountPopup onClose={() => setShowPopup(false)} />}
 
@@ -111,7 +110,6 @@ function App() {
               <Route path="privacy-policy" element={<PrivacyPolicy />} />
 
             </Routes>
-          </BrowserRouter>
         </WishlistProvider>
 
       </CartProvider>

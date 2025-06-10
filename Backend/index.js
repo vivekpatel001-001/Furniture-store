@@ -1,5 +1,5 @@
 import express from "express";
-import connection from "./connection.js";
+import connectDB from "./connection.js";
 import cors from "cors";
 import AuthRoutes from "./Routes/AuthRoutes.js"
 import adminRoutes from "./Routes/admineRoutes.js";
@@ -14,6 +14,7 @@ import WislistRoute  from './Routes/WislistRoutes.js'
 import SerchRouter from './Routes/SerchRoutes.js'
 import dotenv from "dotenv";
 dotenv.config();
+connectDB();
 const app = express();
 app.use(cors());
 app.use(cors({
