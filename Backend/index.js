@@ -5,7 +5,7 @@ import AuthRoutes from "./Routes/AuthRoutes.js"
 import adminRoutes from "./Routes/admineRoutes.js";
 import ProductsRoutes from "./Routes/ProductsRoutes.js";
 import UserRoutes from "./Routes/UserMangmentRoutes.js";
-import CatgoeryRoutes from "./Routes/CategoeyRoutes.js"
+import CategoryRoutes from './Routes/CategoryRoutes.js'; // ✅
 import CartRoutes from "./Routes/CartRoutes.js"
 import Razorpayrouter from "./Routes/razorpayRoutes.js";
 import orderRouter from "./Routes/orderRoutes.js";
@@ -32,7 +32,7 @@ app.use('/api', AuthRoutes)  // logine and register
 app.use('/api', adminRoutes); // admine dasbord mate only 
 app.use('/product', ProductsRoutes) // product mangment mate 
 app.use('/user', UserRoutes) // users mangment mate 
-app.use('/category', CatgoeryRoutes)  // catagoey 
+app.use('/category', CategoryRoutes)  // catagoey 
 app.use('/cart', CartRoutes)
 app.use('/wislist', WislistRoute)
 app.use('/razorpay', Razorpayrouter) // payment gateway
