@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
-import Sidebar from './Sidebaar';
+import Sidebar from './Sidebar';
 import { CartContext } from '../../Cart/Cartcontext';
 import axios from 'axios';
 import { toast } from 'react-toastify';

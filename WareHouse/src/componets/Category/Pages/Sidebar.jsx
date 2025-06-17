@@ -57,18 +57,18 @@ const Sidebar = () => {
   const [showMore, setShowMore] = useState(false);
   
   const categories = [
-    { name: 'Chairs', url: '/Catgory/Chairs' },
-    { name: 'Dining', url: '/Catgory/Dining' },
-    { name: 'Home Decor', url: '/Catgory/home-decor' },
-    { name: 'Lamp', url: '/Catgory/Lamp' },
-    { name: 'Beds', url: '/Catgory/Beds' },
-    { name: 'Sofa Set', url: '/Catgory/Sofa-set' },
-    { name: 'TV Units', url: '/Catgory/Tv-units' },
-    { name: 'Bookshelves', url: '/Catgory/Bookshelves' },
-    { name: 'Shoe Racks', url: '/Catgory/Shoe-racks' },
-    { name: 'Wardrobes', url: '/Catgory/Wardrobes' },
-    { name: 'study-tables', url: '/Catgory/Study-tables' },
-    { name: 'recliners', url: '/Catgory/Recliners' },
+    { name: 'Chairs', url: '/Category/Chairs' },
+    { name: 'Dining', url: '/Category/Dining' },
+    { name: 'Home Decor', url: '/Category/home-decor' },
+    { name: 'Lamp', url: '/Category/Lamp' },
+    { name: 'Beds', url: '/Category/Beds' },
+    { name: 'Sofa Set', url: '/Category/Sofa-set' },
+    { name: 'TV Units', url: '/Category/Tv-units' },
+    { name: 'Bookshelves', url: '/Category/Bookshelves' },
+    { name: 'Shoe Racks', url: '/Category/Shoe-racks' },
+    { name: 'Wardrobes', url: '/Category/Wardrobes' },
+    { name: 'study-tables', url: '/Category/Study-tables' },
+    { name: 'recliners', url: '/Category/Recliners' },
 
   ];
 

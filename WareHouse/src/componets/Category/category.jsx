@@ -1,18 +1,18 @@
 import React from 'react';
 
 const categories = [
-  { name: 'Chairs', icon: '/icons/chair.svg', link: 'Catgory/Chairs' },
-  { name: 'Home Decor', icon: '/icons/home-decore.svg', link: 'Catgory/home-decor' },
-  { name: 'Beds', icon: '/icons/bed-icon.svg', link: 'Catgory/Beds' },
-  { name: 'TV Units', icon: '/icons/tv-unit.svg', link: 'Catgory/Tv-units' },
-  { name: 'Shoe Racks', icon: '/icons/shoe.svg', link: 'Catgory/Shoe-racks' },
-  { name: 'Dining', icon: '/icons/dining-icom.svg', link: 'Catgory/Dining' },
-  { name: 'Lamp', icon: '/icons/lamp-icon.svg', link: 'Catgory/Lamp' },
-  { name: 'Sofa Set', icon: '/icons/sofa-icon.svg', link: 'Catgory/Sofa-set' },
-  { name: 'Bookshelves', icon: '/icons/sofa-icon.svg', link: 'Catgory/Bookshelves' },
-  { name: 'Wardrobes', icon: '/icons/wardrobe-icon.svg', link: 'Catgory/Wardrobes' },
-  { name: 'Study Tables', icon: '/icons/studying-.svg', link: 'Catgory/Study-tables'},
-  { name: 'Recliners', icon: '/icons/recliner-120x120.png', link: 'Catgory/Recliners' },
+  { name: 'Chairs', icon: '/icons/chair.svg', link: 'Category/Chairs' },
+  { name: 'Home Decor', icon: '/icons/home-decore.svg', link: 'Category/home-decor' },
+  { name: 'Beds', icon: '/icons/bed-icon.svg', link: 'Category/Beds' },
+  { name: 'TV Units', icon: '/icons/tv-unit.svg', link: 'Category/Tv-units' },
+  { name: 'Shoe Racks', icon: '/icons/shoe.svg', link: 'Category/Shoe-racks' },
+  { name: 'Dining', icon: '/icons/dining-icom.svg', link: 'Category/Dining' },
+  { name: 'Lamp', icon: '/icons/lamp-icon.svg', link: 'Category/Lamp' },
+  { name: 'Sofa Set', icon: '/icons/sofa-icon.svg', link: 'Category/Sofa-set' },
+  { name: 'Bookshelves', icon: '/icons/sofa-icon.svg', link: 'Category/Bookshelves' },
+  { name: 'Wardrobes', icon: '/icons/wardrobe-icon.svg', link: 'Category/Wardrobes' },
+  { name: 'Study Tables', icon: '/icons/studying-.svg', link: 'Category/Study-tables' },
+  { name: 'Recliners', icon: '/icons/recliner-120x120.png', link: 'Category/Recliners' },
 ];
 
 const FurnitureCategories = () => {

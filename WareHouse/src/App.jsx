@@ -8,9 +8,9 @@ import ForgetPassword from './componets/authentication/ForgetPassword/ForgetPass
 import AdminePanel from './componets/admine/admin';
 // import AdmineRoute from './componets/Security/AdmineRoutes';
 // import ProductManagement from "./componets/admine/pages/ProductManagement"
-import Maincatogry from './componets/Catgory/Maincatogry';
+import Maincategory from './componets/Category/MainCategory';
 import AllProduct from './componets/ProductList/ProductList';
-import ProductListing from './componets/Catgory/Pages/ProductListing';
+import ProductListing from './componets/Category/Pages/ProductListing';
 import "./App.css";
 import ProductInfo from './componets/Productinfopage/Productinfo';
 // nav menu section 
@@ -72,7 +72,7 @@ function App() {
                 <Route path="login" element={<LoginPage />} />
                 <Route path="login/forgetpassword" element={<ForgetPassword />} />
                 <Route path="/admin-panel/*" element={<AdminePanel />} />
-                <Route path="/catgory/*" element={<Maincatogry />}>
+                <Route path="/category/*" element={<Maincategory />}>
                   <Route path=":category" element={<ProductListing />} />
                 </Route>
                 <Route path="product" element={<AllProduct />} />
