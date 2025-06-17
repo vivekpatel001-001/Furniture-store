@@ -72,7 +72,7 @@ function App() {
                 <Route path="login" element={<LoginPage />} />
                 <Route path="login/forgetpassword" element={<ForgetPassword />} />
                 <Route path="/admin-panel/*" element={<AdminePanel />} />
-                <Route path="/category/*" element={<Maincategory />}>
+                <Route path="/Category/*" element={<Maincategory />}>
                   <Route path=":category" element={<ProductListing />} />
                 </Route>
                 <Route path="product" element={<AllProduct />} />
