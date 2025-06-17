@@ -18,7 +18,7 @@ const DiscountPopup = ({ onClose }) => {
           className="w-24 h-24 mx-auto mb-6 animate-bounce"
         />
 
-        <h2 className="text-4xl font-extrabold mb-4 text-center">Limited Time Offer!</h2>
+        <h2 className="text-4xl font-extrabold mb-4 text-center"> Vivek Patel Store </h2>
         <p className="mb-6 text-lg text-center">
           🎉 Use code <span className="font-bold text-yellow-300">SAVE20</span> and get <b>20% OFF</b> on your first purchase!
         </p>
